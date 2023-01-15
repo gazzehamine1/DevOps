@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: gazze
+Build-Jdk: 17.0.5
+Implementation-Title: EmployeeManagementApp
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.projet
+Implementation-URL: https://spring.io/projects/spring-boot/EmployeeManag
+ ementApp
+Created-By: Maven Integration for Eclipse
+

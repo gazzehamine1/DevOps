@@ -1,0 +1,52 @@
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+<div class="container-fluid">
+    <div class="row">
+    <div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">Search</span>
+    <input type="text" [(ngModel)]="texte" class="form-control" aria-label="Sizing
+    
+    example input" aria-describedby="inputGroup-sizing-default">
+    
+    </div>
+    </div>
+<div class="container" id="main-container">
+  <div *ngIf="employees.length === 0; else employeeList">
+    <p>There are no employees to display.</p>
+  </div>
+  <ng-template #employeeList>
+    
+    <div class="row">
+        
+        <div *ngFor="let employee of employeeFilter" class="col-md-6 col-xl-3">
+            <div class="card m-b-30">
+                <div class="card-body row">
+                    <div class="col-6">
+                        <a href=""><img src="http://localhost:8081/restapiemployee/getImage/{{employee?.id}}" alt="" class="img-fluid rounded-circle w-60"></a>
+                    </div>
+                    <div class="col-6 card-title align-self-center mb-0">
+                        <h5>{{employee?.name}}</h5>
+                        <p class="m-0">{{employee.job}} at the {{employee.department.name}} department</p>
+                    </div>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><i class="fa fa-envelope float-right"></i>Email : <a href="#">{{employee?.email}}</a></li>
+                    <li class="list-group-item"><i class="fa fa-phone float-right"></i>Phone : {{employee?.phone}}</li>
+                </ul>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><i class="fa fa-user float-right"></i>Manager : <a href="#">{{employee?.manager?.name}}</a></li>
+                </ul>
+                <div class="card-body">
+                    <div class="float-right btn-group btn-group-sm">
+                        <a href="updateEmployee/{{employee.id}}" class="btn btn-primary tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-pencil"></i> </a>
+                        <a (click)="delete(employee)" class="btn btn-secondary tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-times"></i></a>
+                    </div>
+                 
+                </div>
+            </div>
+        </div>
+   
+    </div>
+</ng-template>    
+</div>

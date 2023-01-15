@@ -1,0 +1,63 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+  <a class="navbar-brand" style="color:white;">Employee Manager</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarColor02">
+    <ul class="navbar-nav mr-auto">
+       <li class="nav-item active">
+          <a class="nav-link" href="list">Employees List<span class="sr-only"></span></a>
+          <router-outlet></router-outlet>
+
+       </li>
+    </ul>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+         <a class="nav-link" href="listManagers">Managers List<span class="sr-only"></span></a>
+         <router-outlet></router-outlet>
+
+      </li>
+   </ul>
+   <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+         <a class="nav-link" href="listDepartments">Departments List<span class="sr-only"></span></a>
+         <router-outlet></router-outlet>
+
+      </li>
+   </ul>
+  <div class="collapse navbar-collapse" id="navbarColor02">
+    <ul class="navbar-nav mr-auto">
+       <li class="nav-item active">
+          <a class="nav-link" href="ajouter">Add Employee<span class="sr-only"></span></a>
+          <router-outlet></router-outlet>
+
+       </li>
+       <li class="nav-item active">
+         <a class="nav-link" href="addManager">Add Manager<span class="sr-only"></span></a>
+         <router-outlet></router-outlet>
+
+      </li>
+    </ul>
+    <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav mr-auto">
+           <li class="nav-item active">
+              <a class="nav-link" href="addDepartment">Add Department<span class="sr-only"></span></a>
+           </li>
+        </ul>
+        
+      </div>
+      
+     </div>
+ </div>
+
+  <div class="collapse navbar-collapse" id="navbarColor02">
+     <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+        </li>
+     </ul>
+    
+  </div>
+</nav>
+  <router-outlet></router-outlet>

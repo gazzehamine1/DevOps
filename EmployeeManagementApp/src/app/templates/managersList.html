@@ -1,0 +1,46 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+<div class="container-fluid">
+    <div class="row">
+    <div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">Search</span>
+    <input type="text" [(ngModel)]="texte" class="form-control" aria-label="Sizing
+    
+    example input" aria-describedby="inputGroup-sizing-default">
+    
+    </div>
+    </div>
+<div class="container" id="main-container">
+  <div *ngIf="managers.length === 0; else managerList">
+    <p>There are no managers to display.</p>
+  </div>
+  <ng-template #managerList>
+    <div class="row">
+        <div *ngFor="let manager of managerFilter" class="col-md-6 col-xl-3">
+            <div class="card m-b-30">
+                <div class="card-body row">
+                    <div class="col-6">
+                        <a href=""><img src="http://localhost:8081/restapimanager/getImage/{{manager?.id}}" alt="" class="img-fluid rounded-circle w-60"></a>
+                    </div>
+                    <div class="col-6 card-title align-self-center mb-0">
+                        <h5>{{manager?.name}}</h5>
+                        <p class="m-0">Manager of the {{manager.department.name}} department</p>
+                    </div>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><i class="fa fa-envelope float-right"></i>Email : <a href="#">{{manager?.email}}</a></li>
+                    <li class="list-group-item"><i class="fa fa-phone float-right"></i>Phone : {{manager?.phone}}</li>
+                </ul>
+                <div class="card-body">
+                    <div class="float-right btn-group btn-group-sm">
+                        <a href="updateManager/{{manager.id}}" class="btn btn-primary tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-pencil"></i> </a>
+                        <a  (click)="delete(manager)" class="btn btn-secondary tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-times"></i></a>
+                    </div>
+                 
+                </div>
+            </div>
+        </div>
+   
+    </div>
+</ng-template>    
+</div>

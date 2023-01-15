@@ -1,0 +1,17 @@
+C:\Users\gazze\OneDrive\Bureau\GestionProduit-V\src\main\java\com\projet\employeemanagementapp\dao\DepartmentRepository.java
+C:\Users\gazze\OneDrive\Bureau\GestionProduit-V\src\main\java\com\projet\employeemanagementapp\entities\Department.java
+C:\Users\gazze\OneDrive\Bureau\GestionProduit-V\src\main\java\com\projet\employeemanagementapp\service\ServiceManager.java
+C:\Users\gazze\OneDrive\Bureau\GestionProduit-V\src\main\java\com\projet\employeemanagementapp\controller\EmployeeController.java
+C:\Users\gazze\OneDrive\Bureau\GestionProduit-V\src\main\java\com\projet\employeemanagementapp\service\ServiceEmployee.java
+C:\Users\gazze\OneDrive\Bureau\GestionProduit-V\src\main\java\com\projet\employeemanagementapp\service\IServiceDepartment.java
+C:\Users\gazze\OneDrive\Bureau\GestionProduit-V\src\main\java\com\projet\employeemanagementapp\dao\ManagerRepository.java
+C:\Users\gazze\OneDrive\Bureau\GestionProduit-V\src\main\java\com\projet\employeemanagementapp\restcontroller\ManagerRestController.java
+C:\Users\gazze\OneDrive\Bureau\GestionProduit-V\src\main\java\com\projet\employeemanagementapp\entities\Manager.java
+C:\Users\gazze\OneDrive\Bureau\GestionProduit-V\src\main\java\com\projet\employeemanagementapp\service\IServiceEmployee.java
+C:\Users\gazze\OneDrive\Bureau\GestionProduit-V\src\main\java\com\projet\employeemanagementapp\controller\ManagerController.java
+C:\Users\gazze\OneDrive\Bureau\GestionProduit-V\src\main\java\com\projet\employeemanagementapp\EmployeeManagementAppApplication.java
+C:\Users\gazze\OneDrive\Bureau\GestionProduit-V\src\main\java\com\projet\employeemanagementapp\entities\Employee.java
+C:\Users\gazze\OneDrive\Bureau\GestionProduit-V\src\main\java\com\projet\employeemanagementapp\service\ServiceDepartment.java
+C:\Users\gazze\OneDrive\Bureau\GestionProduit-V\src\main\java\com\projet\employeemanagementapp\dao\EmployeeRepository.java
+C:\Users\gazze\OneDrive\Bureau\GestionProduit-V\src\main\java\com\projet\employeemanagementapp\restcontroller\EmployeeRestController.java
+C:\Users\gazze\OneDrive\Bureau\GestionProduit-V\src\main\java\com\projet\employeemanagementapp\service\IServiceManager.java

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.FormationSpringBoot.GestionProduit.GestionProduitApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.553 s - in com.FormationSpringBoot.GestionProduit.GestionProduitApplicationTests

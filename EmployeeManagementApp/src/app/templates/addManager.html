@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="card">
+        <div class="card-head">
+            <h2>Add A New Manager</h2>
+            <router-outlet></router-outlet>
+
+        </div>
+        <div class="card-body">
+            <form (ngSubmit)="save(f)" #f="ngForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter Name" ngModel name="name" required
+                        #nom="ngModel">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email"  class="form-control" id="email" placeholder="Enter Email" ngModel name="email" required
+                    #email="ngModel">
+                  </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" class="form-control" id="phone" placeholder="Enter Phone Number" ngModel name="phone" required
+                        #nom="ngModel">
+                </div>
+            
+                <div class="form-group">
+                    <label for="quantite">Photo</label>
+                    <input type="file" accept="image/*" (change)="selectimage($event)" class="form-control-file">
+                </div>
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <select class="form-control" ngModel name="department" required style="height: 50px;">
+                        <option selected hidden ngValue="">Choose Department</option>
+                        <option *ngFor="let c of departments" [ngValue]="c">{{c.name}}</option>
+                    </select>
+                </div>
+                <br>
+                <button [disabled]="!f.valid" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

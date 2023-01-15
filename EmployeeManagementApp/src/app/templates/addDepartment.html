@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="card">
+        <div class="card-head">
+            <h2>Add A New Department</h2>
+
+        </div>
+        <div class="card-body">
+            <form (ngSubmit)="save(f)" #f="ngForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter Name" ngModel name="name" required
+                        #nom="ngModel">
+                </div>
+       
+
+              
+                
+                
+            
+                <br>
+                <button [disabled]="!f.valid" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
