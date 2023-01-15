@@ -17,7 +17,7 @@ pipeline {
 
                 }
             }
-        }
+        
         stage('Test') {
             steps {
                 sh 'cd EmployeeManagementApp && npm run test'
@@ -43,4 +43,5 @@ pipeline {
             }
         }
     }
+
 }
