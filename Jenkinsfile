@@ -19,8 +19,8 @@ pipeline {
         
         stage('Test') {
             steps {
-                sh 'cd EmployeeManagementApp && npm run test'
-                sh 'cd GestionProduit-V && mvn test'
+                sh 'make test'
+
             }
         }
         stage('Build') {
