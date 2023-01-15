@@ -1,19 +1,21 @@
 pipeline {
     agent any
-    
+      environment {
+        DOCKERHUB_CREDENTIALS = credentials('dh_cred')
+    }
+
     stages {
         stage('Checkout') {
             steps {
                 git url: 'https://github.com/gazzehamine1/DevOps', branch: 'main'
             }
         }
-      stage('Init') {
-            steps {
-                withCredentials([string(credentialsId: DOCKERHUB_CREDENTIALS, variable: 'dh_cred')]) {
-                    sh "echo ${env.dh_cred} | docker login --username _json_key --password-stdin https://gcr.io"
-                }
+        stage('Init'){
+            steps{
+                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
             }
         }
+
         
         stage('Test') {
             steps {
