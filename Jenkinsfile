@@ -20,8 +20,8 @@ pipeline {
       
         stage('Build') {
             steps {
-                sh 'cd EmployeeManagementApp && docker build -t frontend:latest .'
-                sh 'cd GestionProduit-V && docker build -t backend:latest .'
+                sh 'cd EmployeeManagementApp && docker build -t gazzehamine/frontend:latest .'
+                sh 'cd GestionProduit-V && docker build -t gazzehamine/backend:latest .'
             }
         }
         stage('Deliver') {
