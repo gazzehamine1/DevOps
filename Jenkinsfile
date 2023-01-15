@@ -12,33 +12,33 @@ pipeline {
         }
         stage('Init'){
             steps{
-                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+                bat 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
             }
         }
 
         
         stage('Test') {
             steps {
-                sh 'cd EmployeeManagementApp && npm run test'
-                sh 'cd GestionProduit-V && mvn test'
+                bat 'cd EmployeeManagementApp && npm run test'
+                bat 'cd GestionProduit-V && mvn test'
             }
         }
         stage('Build') {
             steps {
-                sh 'cd EmployeeManagementApp && docker build -t frontend:latest .'
-                sh 'cd GestionProduit-V && docker build -t backend:latest .'
+                bat 'cd EmployeeManagementApp && docker build -t frontend:latest .'
+                bat 'cd GestionProduit-V && docker build -t backend:latest .'
             }
         }
         stage('Deliver') {
             steps {
-                sh 'docker push gazzehamine/frontend:latest'
-                sh 'docker push gazzehamine/backend:latest'
+                bat 'docker push gazzehamine/frontend:latest'
+                bat 'docker push gazzehamine/backend:latest'
             }
         }
         stage('Cleanup') {
             steps {
-                sh 'docker system prune -f'
-                sh 'docker logout'
+                bat 'docker system prune -f'
+                bat 'docker logout'
             }
         }
     }
