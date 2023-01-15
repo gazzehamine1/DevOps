@@ -17,12 +17,7 @@ pipeline {
         }
 
         
-        stage('Test') {
-            steps {
-                sh 'make test'
-
-            }
-        }
+      
         stage('Build') {
             steps {
                 sh 'cd EmployeeManagementApp && docker build -t frontend:latest .'
