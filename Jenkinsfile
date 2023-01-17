@@ -30,12 +30,12 @@ pipeline {
                 sh 'docker push gazzehamine/backend:latest'
             }
         }
-        stage('Cleanup') {
+          stage('Deploy to Kubernetes') {
             steps {
-                sh 'docker system prune -f'
-                sh 'docker rmi gazzehamine/frontend:latest'
-                sh 'docker rmi gazzehamine/backend:latest'
-                sh 'docker logout'
+               script {
+                   kubernetesDeploy(configs: "deploymentservice.yaml", kubeconfigId: :"kubernetes")
+               
+            }
             }
         }
     }
