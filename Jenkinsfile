@@ -33,6 +33,8 @@ pipeline {
         stage('Cleanup') {
             steps {
                 sh 'docker system prune -f'
+                sh 'docker rmi gazzehamine/frontend:latest'
+                sh 'docker rmi gazzehamine/backend:latest'
                 sh 'docker logout'
             }
         }
